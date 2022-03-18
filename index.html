@@ -4,6 +4,7 @@
 				<link rel="style.css"/>
 				<meta charset="UTF-8">
 				<title id="v">Заметки</title>
+				<link rel="stylesheet" href="style.css">
 </head>
 <body>
 				<div class="wrapper">
@@ -21,13 +22,13 @@
 				</div>
 				<!-- этот див приветсвие -->
 				<div id="test">
-				Заметка:-)	<input id="ggg" tupe="text" value="" onchange="change()"/>
+				Заметка:-)	<textarea id="ggg"></textarea>
 				</div>
 				<!-- поле ввода заметки -->
 						
 						<button onclick="c()">Записать:)</button>
 						<button onclick="d()">Очистить:(</button>
-				<div>
+				<div id="V">
 				<p id="gadi"></p>
 				</div>
 				<!-- /^сюда помещаются заметки -->
@@ -70,19 +71,23 @@
 		  //это принятие того чьи это заметки			  
 			}
 			function c() {
-			var a = document.getElementById("ggg");		
-			var s = document.getElementById("gadi");	
+			var a = document.getElementById("ggg");	
+			a.id ="ku"	
+			var s = document.getElementById("V");
+			var p = document.createElement("p");
 			var o = document.getElementById("test");
-			var b = document.createElement("input");
-			b.type ="text";
-			b.value ="";
-			b.id ="ggg"
-    s.appendChild(a);
+			var b =  document.createElement("textarea");
+			var br = document.createElement("br");
+			b.id ="ggg";
+			a.class ="y";
+			p.appendChild(a);
+    s.appendChild(p);
+    s.appendChild(br);
     o.appendChild(b);
 			}
-			function d() {
-			
-			}			
+		function d() {
+		 
+			}		
 	</script>			
 	</div>
 </body>
