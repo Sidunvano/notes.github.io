@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head id="kop">
+				<link rel="style.css"/>
+				<meta charset="UTF-8">
+				<title id="v">Заметки</title>
+</head>
+<body>
+				<div class="wrapper">
+				<div id="lu">
+							<select onchange="kol()">
+								<option id="m" onchange="ru()">Русский</option>	
+								<option id="k" onchange="uk()">Украинский</option>	
+													
+							</select>
+								</div>
+				<div id="hello">
+			  	<p id="oko">	Вас приветствуют заметки</p> <br />
+					<p id="buy">	Чьи это заметки? </p> <input id="rype" type="text" value=""/>
+						<button id="uli" onclick="gyt()">отправить</button>
+				</div>
+				<!-- этот див приветсвие -->
+				<div id="test">
+				Заметка:-)	<input id="ggg" tupe="text" value="" onchange="change()"/>
+				</div>
+				<!-- поле ввода заметки -->
+						
+						<button onclick="c()">Записать:)</button>
+						<button onclick="d()">Очистить:(</button>
+				<div>
+				<p id="gadi"></p>
+				</div>
+				<!-- /^сюда помещаются заметки -->
+	<script src="https://code.jquery.com/jquery-3.6.0.js"></script><!-- ссылка на jquery -->
+	<script>
+			var h = document.createElement("div")	
+			/*тестирую jquery*/			
+			function kol() {
+							alert("h")
+			}
+			function ru() {
+							alert("k")
+			}
+			function uk() {
+							alert("j")
+			}
+			function change () {
+			//Неудавшейся автоматический перенос
+			}
+			function gyt() {
+			var л = document.getElementById("uli");
+			var j = document.getElementById("hello");
+			var q = document.getElementById("oko");
+			var e = document.getElementById("buy");
+			var x = document.getElementById("kop");
+			var rol = document.getElementById("v");
+   	var n =       												document.getElementById("rype");	
+   	var l = document.createElement("title");
+   	var v = document.createTextNode("Заметки " + n.value);
+			var w = document.createElement("p");
+			var y = document.createTextNode("это   заметки " + n.value)	;
+			
+			l.appendChild(v);
+			w.appendChild(y);
+			j.replaceChild(w, q);
+			j.removeChild(e);
+			j.removeChild(n);	
+			x.replaceChild(l, rol);		
+		  j.removeChild(л);	
+		  //это принятие того чьи это заметки			  
+			}
+			function c() {
+			var a = document.getElementById("ggg");		
+			var s = document.getElementById("gadi");	
+			var o = document.getElementById("test");
+			var b = document.createElement("input");
+			b.type ="text";
+			b.value ="";
+			b.id ="ggg"
+    s.appendChild(a);
+    o.appendChild(b);
+			}
+			function d() {
+			
+			}			
+	</script>			
+	</div>
+</body>
+</html>
