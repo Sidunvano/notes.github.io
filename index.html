@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head id="kop">
+				<link rel="style.css"/>
+				<meta charset="UTF-8">
+				<title id="v">Заметки</title>
+				<link rel="stylesheet" href="style.css">
+</head>
+<body style="width: 440px">
+				<div class="wrapper">
+				<div id="lu">
+						
+								</div>
+				<div id="hello">
+			  	<p id="oko">	Вас приветствуют заметки</p> <br />
+					<p id="buy">	Чьи это заметки? </p> <input id="rype" type="text" value=""/>
+						<button id="uli" onclick="gyt()">отправить</button>
+				</div>
+				<!-- этот див приветсвие -->
+				<div id="test">
+				Заметка:-)	<textarea id="ggg"></textarea>
+				</div>
+				<!-- поле ввода заметки -->
+						
+						<button onclick="c()">Записать:)</button>
+						<button onclick="d()">Очистить:(</button>
+				<div id="V">
+				<p id="gadi"></p>
+				</div>
+				<!-- /^сюда помещаются заметки -->
+	<script src="https://code.jquery.com/jquery-3.6.0.js"></script><!-- ссылка на jquery -->
+	<script>
+			var h = document.createElement("div")	
+			/*тестирую jquery*/			
+			function gyt() {
+			var л = document.getElementById("uli");
+			var j = document.getElementById("hello");
+			var q = document.getElementById("oko");
+			var e = document.getElementById("buy");
+			var x = document.getElementById("kop");
+			var rol = document.getElementById("v");
+   	var n =       												document.getElementById("rype");	
+   	var l = document.createElement("title");
+   	var v = document.createTextNode("Заметки " + n.value);
+			var w = document.createElement("p");
+			var y = document.createTextNode("это   заметки " + n.value)	;
+			
+			l.appendChild(v);
+			w.appendChild(y);
+			j.replaceChild(w, q);
+			j.removeChild(e);
+			j.removeChild(n);	
+			x.replaceChild(l, rol);		
+		  j.removeChild(л);	
+		  //это принятие того чьи это заметки			  
+			}
+			function c() {
+			var a = document.getElementById("ggg");	
+			a.id ="ku"	
+			var s = document.getElementById("V");
+			var p = document.createElement("p");
+			var o = document.getElementById("test");
+			var b =  document.createElement("textarea");
+			var br = document.createElement("br");
+			b.id ="ggg";
+			a.class ="y";
+			p.appendChild(a);
+    s.appendChild(p);
+    s.appendChild(br);
+    o.appendChild(b);
+			}
+		function d() {
+		 
+			}		
+	</script>			
+	</div>
+</body>
+</html>
